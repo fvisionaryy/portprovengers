@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home — Stranger Things (Demo)</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  
+  <header class="site-header">
+    <div class="left">
+      <div class="logo">NETFLIX</div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="episodes.html">Episodes</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+    </div>
+
+    <div class="center">
+      <div class="search-wrap">
+        <input id="searchInput" placeholder="Search (recommended only)..." />
+        <div id="searchResults" class="search-results" hidden></div>
+      </div>
+    </div>
+
+    <div class="right">
+      <button id="themeToggle" class="icon-btn" title="Toggle theme">🌓</button>
+      <button id="notifBtn" class="icon-btn" title="Notifications">🔔</button>
+
+    </div>
+  </header>
+
+ 
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Stranger Things</h1>
+      <p class="meta">2016 • 16+ • 4 Seasons</p>
+      <p class="lead">When a young boy vanishes, a small town uncovers a mystery involving secret experiments and supernatural forces.</p>
+      <div class="hero-controls">
+        <button id="playBtn" class="btn play">▶ Play</button>
+        <button id="moreBtn" class="btn outline">More Info</button>
+        <button id="autoToggle" class="btn small">Auto-Slider: ON</button>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section class="chapters">
+    <article class="chapter">
+      <div class="chapter-info glass">
+        <span class="chapter-label">Chapter</span>
+        <span class="chapter-num">01</span>
+        <p>El is bullied at school. Joyce opens a mysterious package. A scrappy player shakes up D&D night.</p>
+        <div class="chapter-actions">
+          <button class="btn small outline">Beginning</button>
+          <button class="btn small">Synopsis</button>
+        </div>
+      </div>
+      <div class="chapter-media" style="background-image:url('images/chainsaw-man.jpeg')"></div>
+    </article>
+
+    <article class="chapter reverse">
+      <div class="chapter-media" style="background-image:url('images/conan.jpeg')"></div>
+      <div class="chapter-info glass">
+        <span class="chapter-label">Chapter</span>
+        <span class="chapter-num">02</span>
+        <p>A plane brings Mike to California — and a dead body brings Hawkins to a halt.</p>
+        <div class="chapter-actions">
+          <button class="btn small outline">Beginning</button>
+          <button class="btn small">Synopsis</button>
+        </div>
+      </div>
+    </article>
+  </section>
+
+
+ 
+  <div id="summaryModal" class="modal-bg" aria-hidden>
+    <div class="modal">
+      <button id="closeSummary" class="close">✖</button>
+      <h3 id="summaryTitle"></h3>
+      <p id="summaryText"></p>
+      <div style="margin-top:12px">
+        <button id="openDetail" class="btn small">Open Detail Page</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="trailerModal" class="modal-bg" aria-hidden>
+    <div class="modal modal-trailer">
+      <button id="closeTrailer" class="close">✖</button>
+      <div id="trailerContainer"></div>
+    </div>
+  </div>
+
+
+<h2 class="section-title">Top Picks For You</h2>
+<div class="slider" id="slider-footer">
+    <div class="slide-item"
+         data-id="t1"
+         data-title="AVENGERS"
+         data-summary="Earth’s mightiest heroes — Iron Man, Captain America, Thor, Hulk, Black Widow, and Hawkeye — must come together for the first time to stop Loki, who seeks to conquer Earth using the Tesseract. Despite clashing personalities, the team learns to work together and prevent an alien invasion."
+         style="background-image: url('images/avengers.jpeg');">
+        <div class="fav-toggle">♡</div>
+    </div>
+
+    <div class="slide-item"
+         data-id="t2"
+         data-title="DEMON SLAYER"
+         data-summary="After his family is slaughtered by demons and his sister Nezuko is transformed into one, Tanjiro Kamado becomes a Demon Slayer. He trains to defeat demons, protect Nezuko, and ultimately find a way to restore her humanity. The story follows his battles against powerful demons and his growth alongside allies like Zenitsu and Inosuke."
+         style="background-image: url('images/demon-slayer.jpeg');">
+        <div class="fav-toggle">♡</div>
+    </div>
+
+    <div class="slide-item"
+         data-id="t3"
+         data-title="KIMI NO NAWA"
+         data-summary="Two teenagers, Mitsuha and Taki, mysteriously start switching bodies despite living in different locations and periods of time. As they try to understand the phenomenon, they form a deep bond. When Taki discovers that Mitsuha's town faces a catastrophic fate, he fights to change the past and save her. The film blends romance, fantasy, and time-travel elements."
+         style="background-image: url('images/kimi-no-nawa.jpeg');">
+        <div class="fav-toggle">♡</div>
+    </div>
+
+    <div class="slide-item"
+         data-id="t4"
+         data-title="ATTACK OF TITAN"
+         data-summary="Humanity lives inside enormous walled cities to protect itself from giant man-eating Titans. After Titans destroy his hometown, Eren Yeager joins the military to fight them with his friends Mikasa and Armin. As the story unfolds, mysteries about the Titans, the true history of the world, and Eren’s own powers unravel, leading to massive political and moral conflicts."
+         style="background-image: url('images/aot.jpg');">
+        <div class="fav-toggle">♡</div>
+    </div>
+
+    <div class="slide-item"
+         data-id="t5"
+         data-title="JUJUTSU KAISEN"
+         data-summary="In a world where negative human emotions create deadly curses, high-schooler Yuji Itadori consumes a cursed object containing the powerful Curse, Sukuna. He joins Tokyo Jujutsu High, where sorcerers train to fight curses, and becomes central to a dangerous battle between sorcerers and cursed spirits as Sukuna grows stronger inside him."
+         style="background-image: url('images/jjk.jpg');">
+        <div class="fav-toggle">♡</div>
+    </div>
+    
+</div>
+
+  <footer class="site-footer">
+    <div>By Group 4</div>
+    <div>Terms • Privacy</div>
+  </footer>
+</body>
+</html>
